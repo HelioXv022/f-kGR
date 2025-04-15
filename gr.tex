@@ -1,0 +1,82 @@
+\input{preamble}
+\input{format}
+\input{commands}
+
+\begin{document}
+
+\begin{Large}
+    \textsf{\textbf{AMATH 475 GR}}
+    
+    % Subtitle%
+\end{Large}
+
+\vspace{1ex}
+
+\textsf{\textbf{Ziqi Xv}}  \href{mailto:your.email@hotmail.com}{\texttt{z559xu@uwaterloo.ca}}
+
+
+
+\textbf{Smoothness}:
+\url{https://en.wikipedia.org/wiki/Smoothness}\\
+\textbf{Projection (linear algebra)}: \url{https://en.wikipedia.org/wiki/Projection_(linear_algebra)}\\
+\textbf{Gaussian State}:
+A Gaussian state is a ground or thermal state of a (bosonic or fermionic) Hamiltonian which is quadratic in the creation and annihiliation operators. Those states are fully characterized by expectation values of quadratic operators, and thus $4N^2$
+ parameters for $N$
+ fermions or bosons. Gaussian state are the states whose Wigner function is a Gaussian function.\\
+ \textbf{Fundamental invariants of the electromagnetic field}:
+\url{https://physics.stackexchange.com/questions/87817/fundamental-invariants-of-the-electromagnetic-field}
+\begin{problem}{Your title}{problem-label}
+This is an example problem taken from \cite{Sakurai2020}:
+
+\begin{enumerate}[(a)]
+    \item Prove the following
+    \begin{enumerate}[label = (\roman*)]
+        \item $\langle p' | x | \alpha \rangle = \im \hbar \pdv{}{p'} \langle p' | \alpha \rangle$.
+
+        \item $\langle \beta | x | \alpha \rangle = \int \dd{p'} \phi_{\beta}^{*} (p') \im \hbar \pdv{}{p'} \phi_{\alpha} (p'),$
+
+        where $\phi_{\alpha}(p') = \langle p' | \alpha \rangle$ and $\phi_{\beta}(p') = \langle p' | \beta \rangle$ are momentum-space wave functions.
+    \end{enumerate}
+
+    \item What is the physical significance of 
+    \[
+    \exp\left(\dfrac{\im x \Xi}{\hbar}\right),
+    \]
+
+    where $x$ is the position operator and $\Xi$ is some number with the dimension of momentum? Justify your answer.
+\end{enumerate}
+\end{problem}
+
+Notice that the partial derivative and integral are smaller when used in a sentence compared with when you're working in a math environment like \verb|\begin{equation} \end{equation}|. If you want to display the full size of such commands in a sentence, you must use the command \verb|\displaystyle{}|, like it's shown here:
+
+\begin{problem}{Your title}{problem-label-2}
+This is an example problem taken from \cite{Sakurai2020}:
+
+\begin{enumerate}[(a)]
+    \item Prove the following
+    \begin{enumerate}[label = (\roman*)]
+        \item $\langle p' | x | \alpha \rangle = \im \hbar \displaystyle{\pdv{}{p'} }\langle p' | \alpha \rangle$.
+
+        \item $\langle \beta | x | \alpha \rangle = \displaystyle{\int \dd{p'} \phi_{\beta}^{*} (p') \im \hbar \pdv{}{p'} \phi_{\alpha} (p')}$, 
+
+        \vspace{1ex}
+
+        where $\phi_{\alpha}(p') = \langle p' | \alpha \rangle$ and $\phi_{\beta}(p') = \langle p' | \beta \rangle$ are momentum-space wave functions.
+    \end{enumerate}
+
+    \item $\cdots$
+\end{enumerate}
+\end{problem}
+
+I use the package \texttt{physics} which provides a great variety of commands for common operations and symbols. For instance, instead of typing \verb|\dfrac{\partial x}{\partial t}|, the \texttt{physics} package provides the command \verb|\pdv{x}{t}| which gives the same result. I also defined my own commands, so you can take a look in the \texttt{commands.tex} file if you like. I'd also suggest to create a folder and work each problem in a separate \texttt{.tex} file. I already included such folder in the \texttt{Overleaf} template, but you won't see it if you download the \texttt{Github} template. 
+
+% =================================================
+
+% \newpage
+
+% \vfill
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}
